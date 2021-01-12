@@ -1,0 +1,35 @@
+.dropdownmenu { /* Pour le menu principal */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px; 
+} 
+.dropdownmenu ul { /* Pour les sous-menus */
+     list-style-type: none; 
+     margin: 0px;
+     padding: 0px;
+}
+.dropdownmenu ul {
+    display: none;
+}
+.dropdownmenu li {
+    position: relative;
+}
+li {
+    float:left; /*pour IE*/
+    border-left:1px solid black;
+}
+.dropdownmenu a {
+    display: block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    padding: 3px 10px;
+    text-align: center;
+}
+.dropdownmenu li:hover ul {
+    display: block ;
+    position: absolute;
+    top: 36px; 
+    left: 0px; 
+    z-index: 100; 
+}

@@ -1,5 +1,4 @@
-<style>
-    form {
+form {
   /* Uniquement centrer le formulaire sur la page */
   margin: 0 auto;
   width: 400px;
@@ -56,4 +55,3 @@ button {
      entre les étiquettes et les champs texte */
   margin-left: .5em;
 }
-</style>

@@ -33,3 +33,14 @@ li {
     left: 0px; 
     z-index: 100; 
 }
+
+/* Bannière */
+#main-banner {
+    background-color: rgb(255,249,236); /* Arrière plan de la bannière */
+    text-align: center;
+}
+
+/* Contact */
+#contact-background {
+    background-color:rgb(247,248,249);
+}

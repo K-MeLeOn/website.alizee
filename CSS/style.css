@@ -41,6 +41,17 @@ li {
 }
 
 /* Contact */
-#contact-background {
+.grey-background {
     background-color:rgb(247,248,249);
+}
+
+/* FAQ */
+.faq {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    color: whitesmoke;
 }

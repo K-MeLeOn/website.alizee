@@ -4,58 +4,114 @@
     <meta charset='utf-8'>
     <!--Custom CSS-->
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
-    <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"/>
     <!--Custom JS-->
     <script type="text/javascript" src="js/custom.js"></script>
     <!--jQuery JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <!--Bootstrap JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  
+    <!--Panier JS-->
+     <script type="text/javascript" src="js/cart.js"></script>
+    <!--FAQ JS-->
+    <script  type="text/javascript" src="js/faq.js"></script>
 
     <title>La Bio Touch</title>
     
-    <!--Barre de navigation (menu)-->
-         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a href="Website.html">
-            <img src="Image/logo-LBT.png" alt="La Bio Touch" width="125"/>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-            <a class="nav-link" href="Account.html"> Compte client <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="Contact.html.html">Contact</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Menu </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="Hygiene.html">Hygiène</a>
-                <a class="dropdown-item" href="Beauty.html">Beauté</a>
-                <a class="dropdown-item" href="Baby.html">Bébé</a>
-                <a class="dropdown-item" href="Face.html">Soins visage</a>
-                <a class="dropdown-item" href="Body.html">Soins corps</a>
-                <a class="dropdown-item" href="Kids.html">Soins Enfants</a>
-                <a class="dropdown-item" href="Food.html">Alimentation</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">FAQ</a>
-            </div>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        </div>
-    </nav>
-</head>
+    <header>
+<!--Baniere en-tête-->
+        <img src="Image/logo-LBT.png" alt="La Bio Touch" width="350"/>
+        <h3>Produits naturels & bio | Fabrication française</h3>
+        <h1>Produits naturels et bio,<br> fabriqués en France</h1>
+        <h2>Parce que nous n'avons pas besoin d'aller loin, pour trouver des produits sains !</h2>
+      </header>
+    </head>
+
     <body>
-        
-      <h1>Produits naturels et bio <br> Fabrication française </h1>
-      <h2>Parce que nous n'avons pas besoin d'aller loin pour trouver des produits sains !</h2>
+
+<!--Menu-->
+<div class="navbar">
+    <a href="index.html">Accueil</a>
+    <a href="Contact.html">Contact</a>
+    <a href="about.html">Présentation</a>
+    <a href="Account.html">Compte client</a>
+      <div class="dropdown">
+      <button class="dropbtn">E-shop
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <div class="header"></div>
+        <div class="row">
+          <div class="column">
+            <h4>Hygiène</h4> <p left:20px </p>
+            <a href="Teeth.html">Dentaire</a>
+            <a href="deodorant.html">Déodorants</a>
+            <a href="Soap.html">Savons</a>
+            <a href="Shampoo.html">Shampoings</a>
+            <a href="Baby.html">Soins bébé</a>
+          </div>
+          <div class="column">
+            <h4>Beauté</h4> <p left:50px </p>
+              <a href="Kids.html">Enfants</a>
+              <a href="Face.html">Soins visage</a>
+            <a href="Body.html">Soins corps</a>
+            <a href="Beauty.html">Maquillage</a>
+          </div>
+          <div class="column">
+            <h4>Nutrition</h4> 
+            <a href="Food.html">Pots bébé</a>
+            <a href="Salt.html">Salé</a>
+            <a href="Sweet.html">Sucré</a>
+          </div>
+        </div>
+      </div>
+      <input type="search" id="maRecherche" name="q"
+      placeholder="Rechercher sur le site…"><button>Rechercher</button>
+    </div>
+    <div class="dropdown">
+      <div id="cart">
+          <p><span id="in-cart-items-num">0</span> Articles</p>
+      </div>
+     <ul id="cart-dropdown" hidden>
+          <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+          <li class="go-to-cart hidden"><a href="cart.html">Voir le panier</a></li>
+      </ul>
+  </div>
+</div>
+
+<h4>Consultez notre foire aux questions !</h4>
+
+<section class="faq-section">
+  <input type="checkbox" id="q1">
+  <label for="q1">Lorem ipsum dolor sit amet. ?</label>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui distinctio officia, labore soluta cumque vel possimus delectus harum. Quam iste natus molestiae quae iure assumenda soluta, ex ipsa! Ipsam, omnis. Delectus cum officia a aperiam inventore accusantium exercitationem autem similique.</p>
+  
+</section>
+
+<section class="faq-section">
+  <input type="checkbox" id="q2">
+  <label for="q2">Lorem ipsum dolor sit amet.?</label>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum porro eligendi nemo eos, recusandae iste rerum, consequuntur culpa fugiat possimus veritatis? Necessitatibus vel optio, nam voluptate officia deleniti! Totam reiciendis asperiores vero nulla repellat, consequuntur expedita accusamus eos reprehenderit suscipit laudantium eaque voluptate debitis. Non.  </p>
+  
+</section>
+
+<section class="faq-section">
+  <input type="checkbox" id="q3">
+  <label for="q3">Lorem ipsum dolor sit amet.?</label>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur mollitia alias velit, consectetur amet cupiditate sit aperiam dolorem tempora dolore quae fugiat nisi voluptatum facilis animi assumenda, ex dolor ut pariatur accusamus ipsa accusantium? Non cumque aliquid perferendis praesentium laborum harum, ullam quam ad omnis at temporibus deserunt consectetur doloremque rem officia? Aperiam animi mollitia hic doloribus eos placeat laboriosam?</p>
+  
+</section>
+
+<section class="faq-section">
+  <input type="checkbox" id="q4">
+  <label for="q4">Lorem ipsum dolor sit amet.?</label>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptate ipsa tenetur esse! Voluptatum aut ab quis a corrupti ex incidunt quod omnis aperiam voluptate, aspernatur minus quasi! Iure ad voluptatibus, magni laborum et exercitationem obcaecati ipsum deleniti! Natus ullam quas quisquam porro repudiandae repellendus dignissimos quae ducimus iure nostrum.</p>
+  
+</section>
+
+<section class="faq-section">
+  <input type="checkbox" id="q5">
+  <label for="q5">Lorem ipsum dolor sit amet.?</label>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum porro eligendi nemo eos, recusandae iste rerum, consequuntur culpa fugiat possimus veritatis? Necessitatibus vel optio, nam voluptate officia deleniti! Totam reiciendis asperiores vero nulla repellat, consequuntur expedita accusamus eos reprehenderit suscipit laudantium eaque voluptate debitis. Non.  </p>
+  
+</section>
+
+</body>
+</html>

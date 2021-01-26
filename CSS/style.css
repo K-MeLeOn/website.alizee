@@ -1,37 +1,153 @@
-.dropdownmenu { /* Pour le menu principal */
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px; 
-} 
-.dropdownmenu ul { /* Pour les sous-menus */
-     list-style-type: none; 
-     margin: 0px;
-     padding: 0px;
+/*Titre*/
+h1
+{
+    font-size: 50px; /* Paragraphes de 60 pixels */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position:absolute;
+    left:450px;
+    top:20px;
+    color: #603c0d
 }
-.dropdownmenu ul {
-    display: none;
+h2
+{
+    font-size: 40px; /* Paragraphes de 50 pixels */
+    font-family: Freestyle script;
+    position:absolute;
+    left:450px;
+    top:180px;
+    color: #008037
 }
-.dropdownmenu li {
-    position: relative;
+h3
+{
+    font-size: 23px; /* Paragraphes de 25 pixels */
+    font-family: Brush script MT;
+    position:absolute;
+    right:950px;
+    top:200px;
+    color : #603C0D 
 }
-li {
-    float:left; /*pour IE*/
-    border-left:1px solid black;
+h4
+{
+    font-size: 20px; /* Paragraphes de 20 pixels */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color : #603C0D 
 }
-.dropdownmenu a {
-    display: block;
-    width: 120px;
-    height: 30px;
-    line-height: 30px;
-    padding: 3px 10px;
+h5
+{
+  font-size: 20px; /* Paragraphes de 20 pixels */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color :#008037
+}
+
+
+
+
+/*Menu*/
+.navbar {
+    overflow: hidden;
+    background-color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: #008037;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #008037;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(146, 223, 146);
+        color: white;
 }
-.dropdownmenu li:hover ul {
-    display: block ;
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
     position: absolute;
-    top: 36px; 
-    left: 0px; 
-    z-index: 100; 
+    background-color: transparent;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgb(146, 223, 146);
+    z-index: 1;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background-color:rgb(146, 223, 146);
+    height: 350px;
+  }
+  
+  /* Style links inside the columns */
+  .column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a background color on hover */
+  .column a:hover {
+    background-color: rgb(146, 223, 146);
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ /*Barre de recherche*/ 
+  label {
+    display: block;
+    font: 10px 'Fira Sans', sans-serif;
+}
+input,label {
+  float:center;
+  width:400px ; 
+  margin:12px;
+
+}
+button{
+  float:center;
+  width:100px ; 
+  margin:12px;
+}
+
+/*Panier*/
+.dropdown:hover > #cart-dropdown{
+  display: block;
 }
 
 /* Bannière */
@@ -39,19 +155,182 @@ li {
     background-color: rgb(255,249,236); /* Arrière plan de la bannière */
     text-align: center;
 }
+header
+{
+     background : #FFFAF0;
+     height: 250px;
+     width: 100%;
+     margin: 0;
+     padding: 10px;
+    }
+body
+{
+    background-attachment:white;
+} 
+.row {
+  display: flex;
+}
+
+.col-25 {
+  flex: 25%;
+  padding: 10px;
+}
+.col-75 {
+  flex: 75%;
+  padding: 10px;
+}
+
+.color-red {
+  color:red;
+}
+.color-green {
+  color:green;
+}
 
 /* Contact */
-.grey-background {
-    background-color:rgb(247,248,249);
+#col3
+{
+  font-family:"trebuchet ms",sans-serif;
+  float:right;
+  width:700px;
+  background-color:white;
+  padding:10px;
+  }
+ fieldset {
+  padding:0 20px 20px 20px;
+  margin-bottom:10px;
+  border:1px solid rgb(146, 223, 146);
+  font-size:30px;
+  }
+ legend {
+  color:rgb(146, 223, 146);
+  font-weight:bold
+  }
+ label {
+  margin-top:10px;
+  display:block;
+  font-family:Freestyle script;
+  font-size:30px;
+  }
+ label.inline {
+  display:inline;
+  margin-right:50px;
+  }
+ input, textarea, select, option {
+  background-color:rgba(146, 223, 146, 0.493);
+  }
+ input, textarea, select {
+  padding:3px;
+  border:1px solid rgb(146, 223, 146);
+  border-radius:5px;
+  width:500px;
+  box-shadow:1px 1px 2px #C0C0C0 inset;
+  }
+ select {
+  margin-top:10px;
+  }
+ input[type=submit], input[type=reset] {
+  width:100px;
+  margin-left:5px;
+  box-shadow:1px 1px 1px rgb(146, 223, 146);
+  cursor:pointer;
+  }
+
+  #col4
+{
+margin-left:220px;
+background-color: white;
+padding:10px;
 }
+
 
 /* FAQ */
-.faq {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+/* Espacement entre les questions */
+.faq-section{
+  margin: 40px 0;
 }
 
-footer {
-    color: whitesmoke;
+/* Masquer les checkbox et les paragraphes */
+.faq-section input,
+.faq-section p{
+  display: none;
+}
+
+/* Montrer uniquement les débuts de réponses */
+.faq-section label+p{
+  display: block;
+  color: #999;
+  font-size: .85em;
+  transition: all .15s ease-out;
+  /* Couper le texte */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Si le checkbox est coché, montrer tous les paragraphes */
+.faq-section input[type=checkbox]:checked~p{
+  display: block;
+  color: #444;
+  font-size: 1em;
+  /* Restaurer le texte entier */
+  text-overflow: clip;
+  white-space: normal;
+  overflow: visible;
+}
+
+/* Style des label */
+.faq-section label{
+  font-size: 1.2em;
+  cursor: pointer;
+  background: #eee;
+  display: block;
+  position: relative;
+  padding: 7px 10px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-left: 3px solid #888;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  transition: all .15s ease-out;
+}
+
+/* Éviter de sélectionner le texte en cliquant plusieurs fois */
+.faq-section label::selection{
+  background: none;
+}
+
+.faq-section label:hover{
+  background: #f5f5f5;
+}
+
+/* Style du label si le checkbox est coché */
+.faq-section input[type=checkbox]:checked~label{
+  border-color: #ff7f50;
+  background: #f5deb4;
+  background-image: linear-gradient(to bottom, #fff, #f5deb4);
+  box-shadow: 0 0 1px rgba(0,0,0,.4);
+}
+
+/* Flèche du label par défaut */
+.faq-section label::before{
+  content: '';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  margin-top: -6px;
+  border: 6px solid transparent;
+  border-left-color: inherit;
+}
+
+/* Flèche du label sélectionné */
+.faq-section input[type=checkbox]:checked~label::before{
+  border: 6px solid transparent;
+  border-top-color: inherit;
+  margin-top: -3px;
+  right: 10px;
+}
+
+footer{
+  text-align: center;
+  background: grey;
 }

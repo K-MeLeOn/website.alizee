@@ -2,56 +2,74 @@
 <html>
 <head>
     <meta charset='utf-8'>
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <!--Custom JS-->
+    <script type="text/javascript" src="js/custom.js"></script>
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!--Panier JS-->
+     <script type="text/javascript" src="js/cart.js"></script>
 
-<title>La Bio Touch</title>
+    <title>La Bio Touch</title>
+    
+    <header>
+<!--Baniere en-tête-->
+        <img src="Image/logo-LBT.png" alt="La Bio Touch" width="350"/>
+        <h3>Produits naturels & bio | Fabrication française</h3>
+        <h1>Produits naturels et bio,<br> fabriqués en France</h1>
+        <h2>Parce que nous n'avons pas besoin d'aller loin, pour trouver des produits sains !</h2>
+      </header>
+    </head>
 
-</head>
     <body>
-        <tagname style="color:black;">
 
- <!-- Accueil -->
- <p><a href="Website.html">
-    <img src="../bundles/logo-LBT.jpg " alt="La Bio Touch"/>
-   </img> </a></p>
-
-<!-- Compte client -->
-<p><a href="Account.html">Compte client</a></p>
-   
-<h1>Produits naturels et bio <br> Fabrication française </h1>
-    <h2>Parce que nous n'avons pas besoin d'aller loin pour trouver des produits sains !</h2>
- <!-- Onglets -->   
- <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+<!--Menu-->
 <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
-    <div class="dropdown">
-      <button class="dropbtn">Dropdown
+    <a href="index.html">Accueil</a>
+    <a href="Contact.html">Contact</a>
+    <a href="about.html">Présentation</a>
+    <a href="Account.html">Compte client</a>
+      <div class="dropdown">
+      <button class="dropbtn">E-shop
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <div class="header">
-          <h2>Mega Menu</h2>
-        </div>
+        <div class="header"></div>
         <div class="row">
           <div class="column">
-            <h3>Category 1</h3>
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <h4>Hygiène</h4> <p left:20px </p>
+            <a href="Teeth.html">Dentaire</a>
+            <a href="deodorant.html">Déodorants</a>
+            <a href="Soap.html">Savons</a>
+            <a href="Shampoo.html">Shampoings</a>
+            <a href="Baby.html">Soins bébé</a>
           </div>
           <div class="column">
-            <h3>Category 2</h3>
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <h4>Beauté</h4> <p left:50px </p>
+              <a href="Kids.html">Enfants</a>
+              <a href="Face.html">Soins visage</a>
+            <a href="Body.html">Soins corps</a>
+            <a href="Beauty.html">Maquillage</a>
           </div>
           <div class="column">
-            <h3>Category 3</h3>
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <h4>Nutrition</h4> 
+            <a href="Food.html">Pots bébé</a>
+            <a href="Salt.html">Salé</a>
+            <a href="Sweet.html">Sucré</a>
           </div>
         </div>
       </div>
+      <input type="search" id="maRecherche" name="q"
+      placeholder="Rechercher sur le site…"><button>Rechercher</button>
     </div>
+    <div class="dropdown">
+      <div id="cart">
+          <p><span id="in-cart-items-num">0</span> Articles</p>
+      </div>
+     <ul id="cart-dropdown" hidden>
+          <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+          <li class="go-to-cart hidden"><a href="cart.html">Voir le panier</a></li>
+      </ul>
   </div>
+</div>

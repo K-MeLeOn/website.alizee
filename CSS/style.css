@@ -167,6 +167,7 @@ body
 {
     background-attachment:white;
 } 
+
 .row {
   display: flex;
 }
@@ -180,10 +181,10 @@ body
   padding: 10px;
 }
 
-.color-red {
+.bg-red {
   color:red;
 }
-.color-green {
+.bg-green {
   color:green;
 }
 
